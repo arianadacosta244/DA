@@ -67,17 +67,7 @@ void interactiveMode() {
                 if (K == 0) { std::cout << "[INFO] RiskAnalysis = 0, skipping.\n"; break; }
                 if (K == 1) {
                     auto risky = ReviewAssigner::riskAnalysisK1(gData);
-                    std::cout << "\n#Risk Analysis: 1\n";
-                    if (risky.empty()) {
-                        std::cout << "[OK] No single reviewer is critical.\n";
-                    } else {
-                        std::cout << "Risky reviewer(s): ";
-                        for (int i = 0; i < (int)risky.size(); i++) {
-                            if (i) std::cout << ", ";
-                            std::cout << risky[i];
-                        }
-                        std::cout << "\n";
-                    }
+                    ReviewAssigner::printRiskAnalysis(K, risky);
                 } else {
                     std::cout << "[INFO] Risk Analysis K=" << K
                               << " (approach outlined in T2.3, not implemented).\n";
@@ -123,17 +113,8 @@ void batchMode(const std::string& inputFile, const std::string& outputFile) {
 
     if (gData.params.riskAnalysis == 1) {
         auto risky = ReviewAssigner::riskAnalysisK1(gData);
-        std::cout << "\n#Risk Analysis: 1\n";
-        if (risky.empty()) {
-            std::cout << "[OK] No single reviewer is critical.\n";
-        } else {
-            std::cout << "Risky reviewer(s): ";
-            for (int i = 0; i < (int)risky.size(); i++) {
-                if (i) std::cout << ", ";
-                std::cout << risky[i];
-            }
-            std::cout << "\n";
-        }
+        ReviewAssigner::printRiskAnalysis(1, risky);
+        ReviewAssigner::appendRiskAnalysisToFile(gData.params.outputFileName, 1, risky);
     } else if (gData.params.riskAnalysis > 1) {
         std::cout << "[INFO] Risk Analysis K=" << gData.params.riskAnalysis
                   << " (T2.3, not implemented).\n";

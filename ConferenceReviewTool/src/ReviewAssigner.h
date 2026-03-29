@@ -53,6 +53,8 @@ public:
      * Complexidade: O(R * V * E^2)
      */
     static std::vector<int> riskAnalysisK1(const ConferenceData& data);
+    static void printRiskAnalysis(int K, const std::vector<int>& risky);
+    static void appendRiskAnalysisToFile(const std::string& filename, int K, const std::vector<int>& risky);
 
 private:
     static Graph<int> buildFlowGraph(const ConferenceData& data, int excludeReviewer = -1);

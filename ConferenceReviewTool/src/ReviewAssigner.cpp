@@ -16,8 +16,13 @@ Graph<int> ReviewAssigner::buildFlowGraph(const ConferenceData& data, int exclud
     g.addVertex(NodeId::source());
     g.addVertex(NodeId::sink());
 
+    int mode = p.generateAssignments;
+
     std::set<int> topics;
-    for (const auto& s : data.submissions) topics.insert(s.primaryTopic);
+    for (const auto& s : data.submissions) {
+        topics.insert(s.primaryTopic);
+        if (mode >= 2 && s.secondaryTopic > 0) topics.insert(s.secondaryTopic);
+    }
     for (int t : topics) g.addVertex(NodeId::topic(t));
     for (const auto& r : data.reviewers)
         if (r.id != excludeReviewer) g.addVertex(NodeId::reviewer(r.id));
@@ -45,12 +50,18 @@ Graph<int> ReviewAssigner::buildFlowGraph(const ConferenceData& data, int exclud
             addFlowEdge(NodeId::topic(r.primaryExpertise), NodeId::reviewer(r.id), p.maxReviewsPerReviewer);
     }
 
-    // Reviewer → Submission  (capacidade = 1, apenas se os tópicos primários coincidem)
+    // Reviewer → Submission  (capacidade = 1)
+    // Modo 1: só tópico primário da submission
+    // Modo 2: tópico primário ou secundário da submission
     for (const auto& r : data.reviewers) {
         if (r.id == excludeReviewer) continue;
-        for (const auto& s : data.submissions)
-            if (r.primaryExpertise == s.primaryTopic)
+        for (const auto& s : data.submissions) {
+            bool match = (r.primaryExpertise == s.primaryTopic);
+            if (!match && mode >= 2 && s.secondaryTopic > 0)
+                match = (r.primaryExpertise == s.secondaryTopic);
+            if (match)
                 addFlowEdge(NodeId::reviewer(r.id), NodeId::submission(s.id), 1.0);
+        }
     }
 
     // Submission → Sink  (capacidade = MinReviewsPerSubmission)
@@ -163,6 +174,11 @@ std::vector<Assignment> ReviewAssigner::assign(const ConferenceData& data) {
 }
 
 std::vector<int> ReviewAssigner::riskAnalysisK1(const ConferenceData& data) {
+    // Se o assignment base já não cobre tudo, não há reviewers críticos
+    Graph<int> base = buildFlowGraph(data);
+    edmondsKarp(base, NodeId::source(), NodeId::sink());
+    if (!isFullyCovered(base, data)) return {};
+
     std::vector<int> risky;
     for (const auto& r : data.reviewers) {
         Graph<int> g = buildFlowGraph(data, r.id);
@@ -231,11 +247,45 @@ void ReviewAssigner::writeOutput(const ConferenceData& data,
             out << a.reviewerId << ", " << a.submissionId << ", " << a.matchedDomain << "\n";
     }
     out << "#Total: " << assignments.size() << "\n";
-    for (const auto& s : data.submissions)
-        if (cnt[s.id] < data.params.minReviewsPerSubmission)
-            out << "#SubmissionId,Domain,MissingReviews\n"
-                << s.id << ", " << s.primaryTopic << ", "
+    bool missingHeader = false;
+    for (const auto& s : data.submissions) {
+        if (cnt[s.id] < data.params.minReviewsPerSubmission) {
+            if (!missingHeader) { out << "#SubmissionId,Domain,MissingReviews\n"; missingHeader = true; }
+            out << s.id << ", " << s.primaryTopic << ", "
                 << (data.params.minReviewsPerSubmission - cnt[s.id]) << "\n";
+        }
+    }
 
     std::cout << "[OK] Output written to: " << data.params.outputFileName << "\n";
+}
+
+void ReviewAssigner::printRiskAnalysis(int K, const std::vector<int>& risky) {
+    std::cout << "\n#Risk Analysis: " << K << "\n";
+    if (risky.empty()) {
+        std::cout << "[OK] No reviewer is critical.\n";
+    } else {
+        for (int i = 0; i < (int)risky.size(); i++) {
+            if (i) std::cout << ", ";
+            std::cout << risky[i];
+        }
+        std::cout << "\n";
+    }
+}
+
+void ReviewAssigner::appendRiskAnalysisToFile(const std::string& filename, int K, const std::vector<int>& risky) {
+    std::ofstream out(filename, std::ios::app);
+    if (!out.is_open()) {
+        std::cerr << "[ERROR] Cannot append to: " << filename << "\n";
+        return;
+    }
+    out << "#Risk Analysis: " << K << "\n";
+    if (risky.empty()) {
+        out << "\n";
+    } else {
+        for (int i = 0; i < (int)risky.size(); i++) {
+            if (i) out << ", ";
+            out << risky[i];
+        }
+        out << "\n";
+    }
 }
