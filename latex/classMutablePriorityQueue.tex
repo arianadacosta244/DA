@@ -2,6 +2,11 @@
 \hypertarget{classMutablePriorityQueue}{}\label{classMutablePriorityQueue}\index{MutablePriorityQueue$<$ T $>$@{MutablePriorityQueue$<$ T $>$}}
 
 
+Fila de prioridade mutável baseada em min-\/heap binário.  
+
+
+
+
 {\ttfamily \#include $<$Mutable\+Priority\+Queue.\+h$>$}
 
 
@@ -19,22 +24,29 @@ Collaboration diagram for Mutable\+Priority\+Queue\texorpdfstring{$<$}{<} T \tex
 \item 
 \Hypertarget{classMutablePriorityQueue_a058fc182052af82e10cc3719e448b62d}\label{classMutablePriorityQueue_a058fc182052af82e10cc3719e448b62d} 
 \mbox{\hyperlink{classEdge}{void}} {\bfseries insert} (\mbox{\hyperlink{classEdge}{T}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classEdge}{x}})
-\item 
+\begin{DoxyCompactList}\small\item\em Insere x na fila. O(log n) \end{DoxyCompactList}\item 
 \Hypertarget{classMutablePriorityQueue_a3880874d7364279ac0d6d31302b28853}\label{classMutablePriorityQueue_a3880874d7364279ac0d6d31302b28853} 
 \mbox{\hyperlink{classEdge}{T}} \texorpdfstring{$\ast$}{*} {\bfseries extract\+Min} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Remove e devolve o elemento mínimo. O(log n) \end{DoxyCompactList}\item 
 \Hypertarget{classMutablePriorityQueue_a0878839cc1d2dba2b8ab2e589ecc6405}\label{classMutablePriorityQueue_a0878839cc1d2dba2b8ab2e589ecc6405} 
 \mbox{\hyperlink{classEdge}{void}} {\bfseries decrease\+Key} (\mbox{\hyperlink{classEdge}{T}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classEdge}{x}})
-\item 
+\begin{DoxyCompactList}\small\item\em Atualiza a posição de x após diminuição da chave. O(log n) \end{DoxyCompactList}\item 
 \Hypertarget{classMutablePriorityQueue_a2edbb1f4a6fa3ff735700dfcebebe8d4}\label{classMutablePriorityQueue_a2edbb1f4a6fa3ff735700dfcebebe8d4} 
 \mbox{\hyperlink{classEdge}{bool}} {\bfseries empty} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Devolve true se a fila estiver vazia. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 \subsubsection*{template$<$\mbox{\hyperlink{classEdge}{class}} \mbox{\hyperlink{classEdge}{T}}$>$\newline
 class Mutable\+Priority\+Queue$<$ T $>$}
-class T must have\+: (i) accessible field int queue\+Index; (ii) operator\texorpdfstring{$<$}{<} defined. 
+Fila de prioridade mutável baseada em min-\/heap binário. 
+
+Requer que a classe T tenha\+: (i) campo acessível int queue\+Index; (ii) operator\texorpdfstring{$<$}{<} definido. Utilizada pelo algoritmo de Dijkstra. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Tipo dos elementos (e.\+g. \doxylink{classVertex}{Vertex}) @complexity insert\+: O(log n), extract\+Min\+: O(log n), decrease\+Key\+: O(log n) \\
+\hline
+\end{DoxyTemplParams}
+
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

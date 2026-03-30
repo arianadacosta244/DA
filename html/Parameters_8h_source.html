@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ConferenceReviewTool: ConferenceReviewTool/src/Parameters.h Source File</title>
+<title>Conference Review Tool: ConferenceReviewTool/src/Parameters.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ConferenceReviewTool
+   <div id="projectname">Conference Review Tool
    </div>
   </td>
  </tr>
@@ -86,22 +86,31 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="structParameters.html">    6</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structParameters.html">Parameters</a> {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keywordtype">int</span> minReviewsPerSubmission   = 1;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keywordtype">int</span> maxReviewsPerReviewer     = 1;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keywordtype">int</span> primaryReviewerExpertise  = 1;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordtype">int</span> secondaryReviewerExpertise= 0;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">int</span> primarySubmissionDomain   = 1;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">int</span> secondarySubmissionDomain = 1;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">int</span> generateAssignments       = 1; <span class="comment">// 0-3</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">int</span> riskAnalysis              = 0; <span class="comment">// 0, 1, K</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    std::string outputFileName    = <span class="stringliteral">&quot;output.csv&quot;</span>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>};</div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="structParameters.html">    9</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structParameters.html">Parameters</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="structParameters.html#a7a88a93ea0e7bb9aa1f2b44acff3776c">   10</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structParameters.html#a7a88a93ea0e7bb9aa1f2b44acff3776c">minReviewsPerSubmission</a>    = 1;   </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="structParameters.html#ae78183abd0f7689d650ab60b0194dd43">   11</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structParameters.html#ae78183abd0f7689d650ab60b0194dd43">maxReviewsPerReviewer</a>      = 1;   </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structParameters.html#a93181dc57462e044aaac72d544c2c0ed">   12</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structParameters.html#a93181dc57462e044aaac72d544c2c0ed">primaryReviewerExpertise</a>   = 1;   </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structParameters.html#a66edfe04b880cf7060f40eae3a1aa695">   13</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structParameters.html#a66edfe04b880cf7060f40eae3a1aa695">secondaryReviewerExpertise</a> = 0;   </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structParameters.html#a22fdf73cc9aa31f94e2edb0738b91ce4">   14</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structParameters.html#a22fdf73cc9aa31f94e2edb0738b91ce4">primarySubmissionDomain</a>    = 1;   </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structParameters.html#ab0a361652545514ac10813459c929f1f">   15</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structParameters.html#ab0a361652545514ac10813459c929f1f">secondarySubmissionDomain</a>  = 1;   </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structParameters.html#abef268c6d45d450896c5503de0e803cd">   16</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structParameters.html#abef268c6d45d450896c5503de0e803cd">generateAssignments</a>        = 1;   </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structParameters.html#a88fbc9d0d3e1682778f1d0e15fb89ea0">   17</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structParameters.html#a88fbc9d0d3e1682778f1d0e15fb89ea0">riskAnalysis</a>               = 0;   </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structParameters.html#a6b3ecf6f312381740f1b66f8771d845a">   18</a></span>    std::string <a class="code hl_variable" href="structParameters.html#a6b3ecf6f312381740f1b66f8771d845a">outputFileName</a>     = <span class="stringliteral">&quot;output.csv&quot;</span>; </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>};</div>
 </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#endif </span><span class="comment">// PARAMETERS_H</span></div>
-<div class="ttc" id="astructParameters_html"><div class="ttname"><a href="structParameters.html">Parameters</a></div><div class="ttdef"><b>Definition</b> Parameters.h:6</div></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#endif </span><span class="comment">// PARAMETERS_H</span></div>
+<div class="ttc" id="astructParameters_html"><div class="ttname"><a href="structParameters.html">Parameters</a></div><div class="ttdoc">Parâmetros de configuração do problema lidos do ficheiro de input.</div><div class="ttdef"><b>Definition</b> Parameters.h:9</div></div>
+<div class="ttc" id="astructParameters_html_a22fdf73cc9aa31f94e2edb0738b91ce4"><div class="ttname"><a href="structParameters.html#a22fdf73cc9aa31f94e2edb0738b91ce4">Parameters::primarySubmissionDomain</a></div><div class="ttdeci">int primarySubmissionDomain</div><div class="ttdoc">Peso do tópico primário da submissão.</div><div class="ttdef"><b>Definition</b> Parameters.h:14</div></div>
+<div class="ttc" id="astructParameters_html_a66edfe04b880cf7060f40eae3a1aa695"><div class="ttname"><a href="structParameters.html#a66edfe04b880cf7060f40eae3a1aa695">Parameters::secondaryReviewerExpertise</a></div><div class="ttdeci">int secondaryReviewerExpertise</div><div class="ttdoc">Peso do tópico secundário do reviewer.</div><div class="ttdef"><b>Definition</b> Parameters.h:13</div></div>
+<div class="ttc" id="astructParameters_html_a6b3ecf6f312381740f1b66f8771d845a"><div class="ttname"><a href="structParameters.html#a6b3ecf6f312381740f1b66f8771d845a">Parameters::outputFileName</a></div><div class="ttdeci">std::string outputFileName</div><div class="ttdoc">Nome do ficheiro de output.</div><div class="ttdef"><b>Definition</b> Parameters.h:18</div></div>
+<div class="ttc" id="astructParameters_html_a7a88a93ea0e7bb9aa1f2b44acff3776c"><div class="ttname"><a href="structParameters.html#a7a88a93ea0e7bb9aa1f2b44acff3776c">Parameters::minReviewsPerSubmission</a></div><div class="ttdeci">int minReviewsPerSubmission</div><div class="ttdoc">Número mínimo de reviews por submissão.</div><div class="ttdef"><b>Definition</b> Parameters.h:10</div></div>
+<div class="ttc" id="astructParameters_html_a88fbc9d0d3e1682778f1d0e15fb89ea0"><div class="ttname"><a href="structParameters.html#a88fbc9d0d3e1682778f1d0e15fb89ea0">Parameters::riskAnalysis</a></div><div class="ttdeci">int riskAnalysis</div><div class="ttdoc">Tipo de análise de risco (0, 1 ou K)</div><div class="ttdef"><b>Definition</b> Parameters.h:17</div></div>
+<div class="ttc" id="astructParameters_html_a93181dc57462e044aaac72d544c2c0ed"><div class="ttname"><a href="structParameters.html#a93181dc57462e044aaac72d544c2c0ed">Parameters::primaryReviewerExpertise</a></div><div class="ttdeci">int primaryReviewerExpertise</div><div class="ttdoc">Peso do tópico primário do reviewer.</div><div class="ttdef"><b>Definition</b> Parameters.h:12</div></div>
+<div class="ttc" id="astructParameters_html_ab0a361652545514ac10813459c929f1f"><div class="ttname"><a href="structParameters.html#ab0a361652545514ac10813459c929f1f">Parameters::secondarySubmissionDomain</a></div><div class="ttdeci">int secondarySubmissionDomain</div><div class="ttdoc">Peso do tópico secundário da submissão.</div><div class="ttdef"><b>Definition</b> Parameters.h:15</div></div>
+<div class="ttc" id="astructParameters_html_abef268c6d45d450896c5503de0e803cd"><div class="ttname"><a href="structParameters.html#abef268c6d45d450896c5503de0e803cd">Parameters::generateAssignments</a></div><div class="ttdeci">int generateAssignments</div><div class="ttdoc">Modo de geração de assignments (0-3)</div><div class="ttdef"><b>Definition</b> Parameters.h:16</div></div>
+<div class="ttc" id="astructParameters_html_ae78183abd0f7689d650ab60b0194dd43"><div class="ttname"><a href="structParameters.html#ae78183abd0f7689d650ab60b0194dd43">Parameters::maxReviewsPerReviewer</a></div><div class="ttdeci">int maxReviewsPerReviewer</div><div class="ttdoc">Número máximo de reviews por reviewer.</div><div class="ttdef"><b>Definition</b> Parameters.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

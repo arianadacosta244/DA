@@ -18,12 +18,6 @@ struct Submission {
 
     /**
      * @brief Constrói uma Submission com os dados fornecidos.
-     * @param id Identificador único
-     * @param title Título do artigo
-     * @param authors Autores do artigo
-     * @param email Email de contacto
-     * @param primaryTopic Tópico primário
-     * @param secondaryTopic Tópico secundário (opcional, default 0)
      */
     Submission(int id, const std::string& title, const std::string& authors,
                const std::string& email, int primaryTopic, int secondaryTopic = 0)

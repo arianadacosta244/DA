@@ -2,6 +2,15 @@
 \hypertarget{structReviewer}{}\label{structReviewer}\index{Reviewer@{Reviewer}}
 
 
+Representa um reviewer da conferência com as suas áreas de expertise.  
+
+
+
+
+{\ttfamily \#include $<$Reviewer.\+h$>$}
+
+
+
 Collaboration diagram for Reviewer\+:
 \nopagebreak
 \begin{figure}[H]
@@ -14,30 +23,33 @@ Collaboration diagram for Reviewer\+:
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{structReviewer_a1b2de8a356288c186dbc5a6ef951806a}\label{structReviewer_a1b2de8a356288c186dbc5a6ef951806a} 
-{\bfseries Reviewer} (\mbox{\hyperlink{classEdge}{int}} id, \mbox{\hyperlink{classEdge}{const}} std\+::string \&name, \mbox{\hyperlink{classEdge}{const}} std\+::string \&email, \mbox{\hyperlink{classEdge}{int}} primary\+Expertise, \mbox{\hyperlink{classEdge}{int}} secondary\+Expertise=0)
-\item 
+{\bfseries Reviewer} (\mbox{\hyperlink{classEdge}{int}} \mbox{\hyperlink{structReviewer_aeacccab23a0ec1c59ab0283f95f01fda}{id}}, \mbox{\hyperlink{classEdge}{const}} std\+::string \&\mbox{\hyperlink{structReviewer_af9ab4025cd39328e9ce594ef165e9e9c}{name}}, \mbox{\hyperlink{classEdge}{const}} std\+::string \&\mbox{\hyperlink{structReviewer_a5ae05709e98e328427aed3ead8912fd8}{email}}, \mbox{\hyperlink{classEdge}{int}} \mbox{\hyperlink{structReviewer_a1a6ba130656856000843bbc57e811486}{primary\+Expertise}}, \mbox{\hyperlink{classEdge}{int}} \mbox{\hyperlink{structReviewer_a19fc5d836237badc57737b4b8bbdcd10}{secondary\+Expertise}}=0)
+\begin{DoxyCompactList}\small\item\em Constrói um \doxylink{structReviewer}{Reviewer} com os dados fornecidos. \end{DoxyCompactList}\item 
 \Hypertarget{structReviewer_af7145ff53bb3ff83c109abe62d6c1ee7}\label{structReviewer_af7145ff53bb3ff83c109abe62d6c1ee7} 
 \mbox{\hyperlink{classEdge}{void}} {\bfseries print} () \mbox{\hyperlink{classEdge}{const}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Imprime os dados do reviewer no stdout. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{structReviewer_aeacccab23a0ec1c59ab0283f95f01fda}\label{structReviewer_aeacccab23a0ec1c59ab0283f95f01fda} 
 \mbox{\hyperlink{classEdge}{int}} {\bfseries id}
-\item 
+\begin{DoxyCompactList}\small\item\em Identificador único do reviewer. \end{DoxyCompactList}\item 
 \Hypertarget{structReviewer_af9ab4025cd39328e9ce594ef165e9e9c}\label{structReviewer_af9ab4025cd39328e9ce594ef165e9e9c} 
 std\+::string {\bfseries name}
-\item 
+\begin{DoxyCompactList}\small\item\em Nome do reviewer. \end{DoxyCompactList}\item 
 \Hypertarget{structReviewer_a5ae05709e98e328427aed3ead8912fd8}\label{structReviewer_a5ae05709e98e328427aed3ead8912fd8} 
 std\+::string {\bfseries email}
-\item 
+\begin{DoxyCompactList}\small\item\em Email do reviewer. \end{DoxyCompactList}\item 
 \Hypertarget{structReviewer_a1a6ba130656856000843bbc57e811486}\label{structReviewer_a1a6ba130656856000843bbc57e811486} 
 \mbox{\hyperlink{classEdge}{int}} {\bfseries primary\+Expertise}
-\item 
+\begin{DoxyCompactList}\small\item\em Tópico primário de expertise. \end{DoxyCompactList}\item 
 \Hypertarget{structReviewer_a19fc5d836237badc57737b4b8bbdcd10}\label{structReviewer_a19fc5d836237badc57737b4b8bbdcd10} 
 \mbox{\hyperlink{classEdge}{int}} {\bfseries secondary\+Expertise}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Tópico secundário de expertise (0 se não definido) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Representa um reviewer da conferência com as suas áreas de expertise. 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

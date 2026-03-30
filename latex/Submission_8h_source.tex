@@ -5,36 +5,33 @@
 \DoxyCodeLine{00001\ }
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ SUBMISSION\_H}}
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ SUBMISSION\_H}}
-\DoxyCodeLine{00004\ \ }
+\DoxyCodeLine{00004\ }
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
-\DoxyCodeLine{00007\ \ }
-\DoxyCodeLine{00008\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structSubmission}{Submission}}\ \{}
-\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{int}\ id;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00010\ \ \ \ \ std::string\ title;\ \ \ \ \ \ \ }
-\DoxyCodeLine{00011\ \ \ \ \ std::string\ authors;\ \ \ \ \ }
-\DoxyCodeLine{00012\ \ \ \ \ std::string\ email;\ \ \ \ \ \ \ }
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{int}\ primaryTopic;\ \ \ \ \ \ }
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ secondaryTopic;\ \ \ \ \ \ }
-\DoxyCodeLine{00015\ \ }
-\DoxyCodeLine{00016\ \ \ \ \ }
-\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{structSubmission}{Submission}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ std::string\&\ title,\ \textcolor{keyword}{const}\ std::string\&\ authors,}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ email,\ \textcolor{keywordtype}{int}\ primaryTopic,\ \textcolor{keywordtype}{int}\ secondaryTopic\ =\ 0)}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ :\ id(\textcolor{keywordtype}{id}),\ title(title),\ authors(authors),\ email(email),}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ primaryTopic(primaryTopic),\ secondaryTopic(secondaryTopic)\ \{\}}
-\DoxyCodeLine{00021\ \ }
-\DoxyCodeLine{00022\ \ \ \ }
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ print()\textcolor{keyword}{\ const\ }\{}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ ["{}}\ <<\ \textcolor{keywordtype}{id}\ <<\ \textcolor{stringliteral}{"{}]\ "{}}\ <<\ title}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ |\ Authors:\ "{}}\ <<\ authors}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ |\ Topic:\ "{}}\ <<\ primaryTopic;}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (secondaryTopic\ !=\ 0)}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}/"{}}\ <<\ secondaryTopic;}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
-\DoxyCodeLine{00030\ \ \ \ \ \}}
-\DoxyCodeLine{00031\ \};}
-\DoxyCodeLine{00032\ \ }
-\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SUBMISSION\_H}}
-\DoxyCodeLine{00034\ \ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structSubmission}{Submission}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structSubmission_a7b6e2405d79134e923f1d74beba845a0}{id}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00013\ \ \ \ \ std::string\ \mbox{\hyperlink{structSubmission_ae143f4081965aaa80af89fc3a1b5baa6}{title}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00014\ \ \ \ \ std::string\ \mbox{\hyperlink{structSubmission_a853f337b093f91f4192c70df3e02d631}{authors}};\ \ \ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ std::string\ \mbox{\hyperlink{structSubmission_ab524f4484bf346c7ba0d94b0a7dd114c}{email}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structSubmission_aa3acc5309038ce8cee78a4edc6faab2e}{primaryTopic}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structSubmission_a31e3e68d8338cb9de1a11ed822f62c9a}{secondaryTopic}};\ \ \ \ \ \ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{structSubmission_a9e5021b1702bf5574c6d1090835ff681}{Submission}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{structSubmission_ae143f4081965aaa80af89fc3a1b5baa6}{title}},\ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{structSubmission_a853f337b093f91f4192c70df3e02d631}{authors}},}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{structSubmission_ab524f4484bf346c7ba0d94b0a7dd114c}{email}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structSubmission_aa3acc5309038ce8cee78a4edc6faab2e}{primaryTopic}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structSubmission_a31e3e68d8338cb9de1a11ed822f62c9a}{secondaryTopic}}\ =\ 0)}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{structSubmission_a7b6e2405d79134e923f1d74beba845a0}{id}}(\mbox{\hyperlink{structSubmission_a7b6e2405d79134e923f1d74beba845a0}{id}}),\ \mbox{\hyperlink{structSubmission_ae143f4081965aaa80af89fc3a1b5baa6}{title}}(\mbox{\hyperlink{structSubmission_ae143f4081965aaa80af89fc3a1b5baa6}{title}}),\ \mbox{\hyperlink{structSubmission_a853f337b093f91f4192c70df3e02d631}{authors}}(\mbox{\hyperlink{structSubmission_a853f337b093f91f4192c70df3e02d631}{authors}}),\ \mbox{\hyperlink{structSubmission_ab524f4484bf346c7ba0d94b0a7dd114c}{email}}(\mbox{\hyperlink{structSubmission_ab524f4484bf346c7ba0d94b0a7dd114c}{email}}),}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structSubmission_aa3acc5309038ce8cee78a4edc6faab2e}{primaryTopic}}(\mbox{\hyperlink{structSubmission_aa3acc5309038ce8cee78a4edc6faab2e}{primaryTopic}}),\ \mbox{\hyperlink{structSubmission_a31e3e68d8338cb9de1a11ed822f62c9a}{secondaryTopic}}(\mbox{\hyperlink{structSubmission_a31e3e68d8338cb9de1a11ed822f62c9a}{secondaryTopic}})\ \{\}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structSubmission_a6b345c5c898e53db5d71d3d7bc9cbc8f}{print}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ ["{}}\ <<\ \textcolor{keywordtype}{id}\ <<\ \textcolor{stringliteral}{"{}]\ "{}}\ <<\ \mbox{\hyperlink{structSubmission_ae143f4081965aaa80af89fc3a1b5baa6}{title}}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ |\ Authors:\ "{}}\ <<\ \mbox{\hyperlink{structSubmission_a853f337b093f91f4192c70df3e02d631}{authors}}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ |\ Topic:\ "{}}\ <<\ \mbox{\hyperlink{structSubmission_aa3acc5309038ce8cee78a4edc6faab2e}{primaryTopic}};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{structSubmission_a31e3e68d8338cb9de1a11ed822f62c9a}{secondaryTopic}}\ !=\ 0)}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}/"{}}\ <<\ \mbox{\hyperlink{structSubmission_a31e3e68d8338cb9de1a11ed822f62c9a}{secondaryTopic}};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SUBMISSION\_H}}
 
 \end{DoxyCode}

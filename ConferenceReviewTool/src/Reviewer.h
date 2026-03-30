@@ -16,11 +16,6 @@ struct Reviewer {
 
     /**
      * @brief Constrói um Reviewer com os dados fornecidos.
-     * @param id Identificador único
-     * @param name Nome do reviewer
-     * @param email Email do reviewer
-     * @param primaryExpertise Tópico primário de expertise
-     * @param secondaryExpertise Tópico secundário de expertise (opcional, default 0)
      */
     Reviewer(int id, const std::string& name, const std::string& email,
              int primaryExpertise, int secondaryExpertise = 0)

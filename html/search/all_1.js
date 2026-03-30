@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['assignment_0',['Assignment',['../struct_assignment.html',1,'']]],
-  ['authors_1',['authors',['../struct_submission.html#a853f337b093f91f4192c70df3e02d631',1,'Submission']]]
+  ['assignment_0',['Assignment',['../structAssignment.html',1,'']]],
+  ['authors_1',['authors',['../structSubmission.html#a853f337b093f91f4192c70df3e02d631',1,'Submission']]]
 ];
