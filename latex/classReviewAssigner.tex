@@ -1,0 +1,55 @@
+\doxysection{Review\+Assigner Class Reference}
+\hypertarget{classReviewAssigner}{}\label{classReviewAssigner}\index{ReviewAssigner@{ReviewAssigner}}
+
+
+Motor de atribuição baseado em Max-\/\+Flow (Edmonds-\/\+Karp).  
+
+
+
+
+{\ttfamily \#include $<$Review\+Assigner.\+h$>$}
+
+
+
+Collaboration diagram for Review\+Assigner\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classReviewAssigner__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classReviewAssigner_af52924f9e9585724a4787a5c918c3a07}\label{classReviewAssigner_af52924f9e9585724a4787a5c918c3a07} 
+\mbox{\hyperlink{classEdge}{static}} std\+::vector$<$ \mbox{\hyperlink{structAssignment}{Assignment}} $>$ {\bfseries assign} (\mbox{\hyperlink{classEdge}{const}} \mbox{\hyperlink{structConferenceData}{Conference\+Data}} \&\mbox{\hyperlink{classEdge}{data}})
+\item 
+\Hypertarget{classReviewAssigner_a88a436647eb8ba7ed041b9a1aae63523}\label{classReviewAssigner_a88a436647eb8ba7ed041b9a1aae63523} 
+\mbox{\hyperlink{classEdge}{static}} \mbox{\hyperlink{classEdge}{void}} {\bfseries write\+Output} (\mbox{\hyperlink{classEdge}{const}} \mbox{\hyperlink{structConferenceData}{Conference\+Data}} \&\mbox{\hyperlink{classEdge}{data}}, \mbox{\hyperlink{classEdge}{const}} std\+::vector$<$ \mbox{\hyperlink{structAssignment}{Assignment}} $>$ \&\mbox{\hyperlink{classEdge}{assignments}})
+\item 
+\Hypertarget{classReviewAssigner_ab9dbdfc0f129f7d1423d2396e9c26352}\label{classReviewAssigner_ab9dbdfc0f129f7d1423d2396e9c26352} 
+\mbox{\hyperlink{classEdge}{static}} \mbox{\hyperlink{classEdge}{void}} {\bfseries print\+Summary} (\mbox{\hyperlink{classEdge}{const}} \mbox{\hyperlink{structConferenceData}{Conference\+Data}} \&\mbox{\hyperlink{classEdge}{data}}, \mbox{\hyperlink{classEdge}{const}} std\+::vector$<$ \mbox{\hyperlink{structAssignment}{Assignment}} $>$ \&\mbox{\hyperlink{classEdge}{assignments}})
+\item 
+\Hypertarget{classReviewAssigner_a8f30245cc8f8121127dc3c04f53aba94}\label{classReviewAssigner_a8f30245cc8f8121127dc3c04f53aba94} 
+\mbox{\hyperlink{classEdge}{static}} std\+::vector$<$ \mbox{\hyperlink{classEdge}{int}} $>$ {\bfseries risk\+Analysis\+K1} (\mbox{\hyperlink{classEdge}{const}} \mbox{\hyperlink{structConferenceData}{Conference\+Data}} \&\mbox{\hyperlink{classEdge}{data}})
+\begin{DoxyCompactList}\small\item\em Risk Analysis K=1\+: identifica reviewers cuja remoção quebra a cobertura. Complexidade\+: O(\+R \texorpdfstring{$\ast$}{*} V \texorpdfstring{$\ast$}{*} E\texorpdfstring{$^\wedge$}{\string^}2) \end{DoxyCompactList}\item 
+\Hypertarget{classReviewAssigner_a2d80be6aeda06124c5b800b71b1a6af1}\label{classReviewAssigner_a2d80be6aeda06124c5b800b71b1a6af1} 
+\mbox{\hyperlink{classEdge}{static}} \mbox{\hyperlink{classEdge}{void}} {\bfseries print\+Risk\+Analysis} (\mbox{\hyperlink{classEdge}{int}} \mbox{\hyperlink{classEdge}{K}}, \mbox{\hyperlink{classEdge}{const}} std\+::vector$<$ \mbox{\hyperlink{classEdge}{int}} $>$ \&\mbox{\hyperlink{classEdge}{risky}})
+\item 
+\Hypertarget{classReviewAssigner_a6612c48ee7550693d59a7ce45ffb8e89}\label{classReviewAssigner_a6612c48ee7550693d59a7ce45ffb8e89} 
+\mbox{\hyperlink{classEdge}{static}} \mbox{\hyperlink{classEdge}{void}} {\bfseries append\+Risk\+Analysis\+To\+File} (\mbox{\hyperlink{classEdge}{const}} std\+::string \&\mbox{\hyperlink{classEdge}{filename}}, \mbox{\hyperlink{classEdge}{int}} \mbox{\hyperlink{classEdge}{K}}, \mbox{\hyperlink{classEdge}{const}} std\+::vector$<$ \mbox{\hyperlink{classEdge}{int}} $>$ \&\mbox{\hyperlink{classEdge}{risky}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Motor de atribuição baseado em Max-\/\+Flow (Edmonds-\/\+Karp). 
+
+Rede (Generate\+Assignments == 1, domínios primários)\+: Source → Tópico(t) cap = INF Tópico(t) → \doxylink{structReviewer}{Reviewer(r)} cap = Max\+Reviews\+Per\+Reviewer (se r.\+primary == t) \doxylink{structReviewer}{Reviewer(r)} → \doxylink{structSubmission}{Submission(s)} cap = 1 (se s.\+primary == t) \doxylink{structSubmission}{Submission(s)} → Sink cap = Min\+Reviews\+Per\+Submission
+
+Complexidade Edmonds-\/\+Karp\+: O(\+V \texorpdfstring{$\ast$}{*} E\texorpdfstring{$^\wedge$}{\string^}2) 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Conference\+Review\+Tool/src/Review\+Assigner.\+h\item 
+Conference\+Review\+Tool/src/Review\+Assigner.\+cpp\end{DoxyCompactItemize}

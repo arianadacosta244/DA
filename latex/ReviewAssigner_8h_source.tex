@@ -1,0 +1,47 @@
+\doxysection{Review\+Assigner.\+h}
+\hypertarget{ReviewAssigner_8h_source}{}\label{ReviewAssigner_8h_source}\index{ConferenceReviewTool/src/ReviewAssigner.h@{ConferenceReviewTool/src/ReviewAssigner.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ REVIEW\_ASSIGNER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ REVIEW\_ASSIGNER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}data\_structures/Graph.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Parser.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structAssignment}{Assignment}}\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{int}\ submissionId;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ reviewerId;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ matchedDomain;}
+\DoxyCodeLine{00016\ \};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structNodeId}{NodeId}}\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ source()\ \ \ \ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ 0;\ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ sink()\ \ \ \ \ \ \ \ \ \ \{\ \textcolor{keywordflow}{return}\ 1;\ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ topic(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classEdge}{t}})\ \ \ \ \{\ \textcolor{keywordflow}{return}\ 2000\ +\ \mbox{\hyperlink{classEdge}{t}};\ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ reviewer(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classEdge}{r}})\ \{\ \textcolor{keywordflow}{return}\ 3000\ +\ \mbox{\hyperlink{classEdge}{r}};\ \}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ submission(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classEdge}{s}})\{\ \textcolor{keywordflow}{return}\ 4000\ +\ \mbox{\hyperlink{classEdge}{s}};\ \}}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classReviewAssigner}{ReviewAssigner}}\ \{}
+\DoxyCodeLine{00046\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{static}\ std::vector<Assignment>\ assign(\textcolor{keyword}{const}\ \mbox{\hyperlink{structConferenceData}{ConferenceData}}\&\ \mbox{\hyperlink{classEdge}{data}});}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ writeOutput(\textcolor{keyword}{const}\ \mbox{\hyperlink{structConferenceData}{ConferenceData}}\&\ \mbox{\hyperlink{classEdge}{data}},\ \textcolor{keyword}{const}\ std::vector<Assignment>\&\ \mbox{\hyperlink{classEdge}{assignments}});}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ printSummary(\textcolor{keyword}{const}\ \mbox{\hyperlink{structConferenceData}{ConferenceData}}\&\ \mbox{\hyperlink{classEdge}{data}},\ \textcolor{keyword}{const}\ std::vector<Assignment>\&\ \mbox{\hyperlink{classEdge}{assignments}});}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{static}\ std::vector<int>\ \mbox{\hyperlink{classReviewAssigner_a8f30245cc8f8121127dc3c04f53aba94}{riskAnalysisK1}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structConferenceData}{ConferenceData}}\&\ \mbox{\hyperlink{classEdge}{data}});}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ printRiskAnalysis(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classEdge}{K}},\ \textcolor{keyword}{const}\ std::vector<int>\&\ \mbox{\hyperlink{classEdge}{risky}});}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ appendRiskAnalysisToFile(\textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{classEdge}{filename}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classEdge}{K}},\ \textcolor{keyword}{const}\ std::vector<int>\&\ \mbox{\hyperlink{classEdge}{risky}});}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classEdge}{Graph<int>}}\ buildFlowGraph(\textcolor{keyword}{const}\ \mbox{\hyperlink{structConferenceData}{ConferenceData}}\&\ \mbox{\hyperlink{classEdge}{data}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classEdge}{excludeReviewer}}\ =\ -\/1);}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ edmondsKarp(\mbox{\hyperlink{classEdge}{Graph<int>}}\&\ \mbox{\hyperlink{classEdge}{g}},\ \textcolor{keywordtype}{int}\ source,\ \textcolor{keywordtype}{int}\ sink);}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ bfs(\mbox{\hyperlink{classEdge}{Graph<int>}}\&\ \mbox{\hyperlink{classEdge}{g}},\ \textcolor{keywordtype}{int}\ source,\ \textcolor{keywordtype}{int}\ sink,\ std::map<\textcolor{keywordtype}{int},\ \mbox{\hyperlink{classEdge}{Edge<int>}}*>\&\ parent);}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{static}\ std::vector<Assignment>\ extractAssignments(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEdge}{Graph<int>}}\&\ \mbox{\hyperlink{classEdge}{g}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structConferenceData}{ConferenceData}}\&\ \mbox{\hyperlink{classEdge}{data}});}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ isFullyCovered(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEdge}{Graph<int>}}\&\ \mbox{\hyperlink{classEdge}{g}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structConferenceData}{ConferenceData}}\&\ \mbox{\hyperlink{classEdge}{data}});}
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ REVIEW\_ASSIGNER\_H}}
+
+\end{DoxyCode}

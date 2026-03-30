@@ -1,0 +1,24 @@
+\doxysection{Parameters.\+h}
+\hypertarget{Parameters_8h_source}{}\label{Parameters_8h_source}\index{ConferenceReviewTool/src/Parameters.h@{ConferenceReviewTool/src/Parameters.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PARAMETERS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PARAMETERS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structParameters}{Parameters}}\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordtype}{int}\ minReviewsPerSubmission\ \ \ =\ 1;}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{int}\ maxReviewsPerReviewer\ \ \ \ \ =\ 1;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{int}\ primaryReviewerExpertise\ \ =\ 1;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{int}\ secondaryReviewerExpertise=\ 0;}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{int}\ primarySubmissionDomain\ \ \ =\ 1;}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{int}\ secondarySubmissionDomain\ =\ 1;}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{int}\ generateAssignments\ \ \ \ \ \ \ =\ 1;\ \textcolor{comment}{//\ 0-\/3}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ riskAnalysis\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0;\ \textcolor{comment}{//\ 0,\ 1,\ K}}
+\DoxyCodeLine{00015\ \ \ \ \ std::string\ outputFileName\ \ \ \ =\ \textcolor{stringliteral}{"{}output.csv"{}};}
+\DoxyCodeLine{00016\ \};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PARAMETERS\_H}}
+
+\end{DoxyCode}

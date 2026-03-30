@@ -8,7 +8,7 @@
 #include "Parameters.h"
 
 /**
- * @brief Result of parsing a CSV input file.
+ * @brief Resultado do processamento (parsing) de um ficheiro CSV.
  */
 struct ConferenceData {
     std::vector<Submission> submissions;
@@ -18,8 +18,8 @@ struct ConferenceData {
 };
 
 /**
- * @brief Reads and parses a conference CSV input file.
- * Time Complexity: O(S + R) where S = submissions, R = reviewers.
+ * @brief Lê e processa um ficheiro CSV da conferência.
+ * Complexidade Temporal: O(S + R) onde S = submissions, R = reviwers.
  */
 class Parser {
 public:

@@ -1,0 +1,38 @@
+\doxysection{Reviewer.\+h}
+\hypertarget{Reviewer_8h_source}{}\label{Reviewer_8h_source}\index{ConferenceReviewTool/src/Reviewer.h@{ConferenceReviewTool/src/Reviewer.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ REVIEWER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ REVIEWER\_H}}
+\DoxyCodeLine{00003\ \ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structReviewer}{Reviewer}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{int}\ id;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00009\ \ \ \ \ std::string\ name;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00010\ \ \ \ \ std::string\ email;\ \ \ \ \ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{int}\ primaryExpertise;\ \ \ \ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{int}\ secondaryExpertise;\ \ }
+\DoxyCodeLine{00013\ \ }
+\DoxyCodeLine{00014\ \ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{structReviewer}{Reviewer}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keyword}{const}\ std::string\&\ email,}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ primaryExpertise,\ \textcolor{keywordtype}{int}\ secondaryExpertise\ =\ 0)}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ :\ id(\textcolor{keywordtype}{id}),\ name(name),\ email(email),}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ primaryExpertise(primaryExpertise),\ secondaryExpertise(secondaryExpertise)\ \{\}}
+\DoxyCodeLine{00019\ \ }
+\DoxyCodeLine{00020\ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ print()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ ["{}}\ <<\ \textcolor{keywordtype}{id}\ <<\ \textcolor{stringliteral}{"{}]\ "{}}\ <<\ name}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ |\ Email:\ "{}}\ <<\ email}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ |\ Expertise:\ "{}}\ <<\ primaryExpertise;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (secondaryExpertise\ !=\ 0)}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}/"{}}\ <<\ secondaryExpertise;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ \ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ REVIEWER\_H}}
+\DoxyCodeLine{00032\ \ }
+
+\end{DoxyCode}

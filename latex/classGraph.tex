@@ -1,0 +1,62 @@
+\doxysection{Graph\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classGraph}{}\label{classGraph}\index{Graph$<$ T $>$@{Graph$<$ T $>$}}
+
+
+Collaboration diagram for Graph\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{classGraph__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classGraph_a8b7b7465fbfd562e2a469f90a437ab75}\label{classGraph_a8b7b7465fbfd562e2a469f90a437ab75} 
+\mbox{\hyperlink{classVertex}{Vertex}}$<$ \mbox{\hyperlink{classEdge}{T}} $>$ \texorpdfstring{$\ast$}{*} {\bfseries find\+Vertex} (\mbox{\hyperlink{classEdge}{const}} \mbox{\hyperlink{classEdge}{T}} \&\mbox{\hyperlink{classEdge}{in}}) \mbox{\hyperlink{classEdge}{const}}
+\item 
+\Hypertarget{classGraph_a00be284ea2be3b3d0f0d2e493b70245b}\label{classGraph_a00be284ea2be3b3d0f0d2e493b70245b} 
+\mbox{\hyperlink{classEdge}{bool}} {\bfseries add\+Vertex} (\mbox{\hyperlink{classEdge}{const}} \mbox{\hyperlink{classEdge}{T}} \&\mbox{\hyperlink{classEdge}{in}})
+\item 
+\Hypertarget{classGraph_af9c903104ad69a7782979fa9caedf163}\label{classGraph_af9c903104ad69a7782979fa9caedf163} 
+\mbox{\hyperlink{classEdge}{bool}} {\bfseries remove\+Vertex} (\mbox{\hyperlink{classEdge}{const}} \mbox{\hyperlink{classEdge}{T}} \&\mbox{\hyperlink{classEdge}{in}})
+\item 
+\Hypertarget{classGraph_ac61af3aafe6277215f5a3b3cc7d58ce2}\label{classGraph_ac61af3aafe6277215f5a3b3cc7d58ce2} 
+\mbox{\hyperlink{classEdge}{bool}} {\bfseries add\+Edge} (\mbox{\hyperlink{classEdge}{const}} \mbox{\hyperlink{classEdge}{T}} \&\mbox{\hyperlink{classEdge}{sourc}}, \mbox{\hyperlink{classEdge}{const}} \mbox{\hyperlink{classEdge}{T}} \&dest, \mbox{\hyperlink{classEdge}{double}} \mbox{\hyperlink{classEdge}{w}})
+\item 
+\Hypertarget{classGraph_a8949d071d45bf93e171e275462e1007a}\label{classGraph_a8949d071d45bf93e171e275462e1007a} 
+\mbox{\hyperlink{classEdge}{bool}} {\bfseries remove\+Edge} (\mbox{\hyperlink{classEdge}{const}} \mbox{\hyperlink{classEdge}{T}} \&source, \mbox{\hyperlink{classEdge}{const}} \mbox{\hyperlink{classEdge}{T}} \&dest)
+\item 
+\Hypertarget{classGraph_aeb94a42983b1612ddbeade1a2a0132ea}\label{classGraph_aeb94a42983b1612ddbeade1a2a0132ea} 
+\mbox{\hyperlink{classEdge}{bool}} {\bfseries add\+Bidirectional\+Edge} (\mbox{\hyperlink{classEdge}{const}} \mbox{\hyperlink{classEdge}{T}} \&\mbox{\hyperlink{classEdge}{sourc}}, \mbox{\hyperlink{classEdge}{const}} \mbox{\hyperlink{classEdge}{T}} \&dest, \mbox{\hyperlink{classEdge}{double}} \mbox{\hyperlink{classEdge}{w}})
+\item 
+\Hypertarget{classGraph_a0853eac15cdf0f06d63f4b8a7820ec71}\label{classGraph_a0853eac15cdf0f06d63f4b8a7820ec71} 
+\mbox{\hyperlink{classEdge}{int}} {\bfseries get\+Num\+Vertex} () \mbox{\hyperlink{classEdge}{const}}
+\item 
+\Hypertarget{classGraph_a41624b03fcb6bd29e4df574a1ec58541}\label{classGraph_a41624b03fcb6bd29e4df574a1ec58541} 
+std\+::vector$<$ \mbox{\hyperlink{classVertex}{Vertex}}$<$ \mbox{\hyperlink{classEdge}{T}} $>$ \texorpdfstring{$\ast$}{*} $>$ {\bfseries get\+Vertex\+Set} () \mbox{\hyperlink{classEdge}{const}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classGraph_a676cdfb976eccfa82b631d2094c1cdac}\label{classGraph_a676cdfb976eccfa82b631d2094c1cdac} 
+\mbox{\hyperlink{classEdge}{int}} {\bfseries find\+Vertex\+Idx} (\mbox{\hyperlink{classEdge}{const}} \mbox{\hyperlink{classEdge}{T}} \&\mbox{\hyperlink{classEdge}{in}}) \mbox{\hyperlink{classEdge}{const}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classGraph_a26b3a6b9c61f02f5b2cd38ad4c6a4953}\label{classGraph_a26b3a6b9c61f02f5b2cd38ad4c6a4953} 
+std\+::vector$<$ \mbox{\hyperlink{classVertex}{Vertex}}$<$ \mbox{\hyperlink{classEdge}{T}} $>$ \texorpdfstring{$\ast$}{*} $>$ {\bfseries vertex\+Set}
+\item 
+\Hypertarget{classGraph_a4517f4351bc7f0348369b25b7c0b44fe}\label{classGraph_a4517f4351bc7f0348369b25b7c0b44fe} 
+\mbox{\hyperlink{classEdge}{double}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries dist\+Matrix} = \mbox{\hyperlink{classEdge}{nullptr}}
+\item 
+\Hypertarget{classGraph_afb9524726f8f3cda3115a0d03e3f6e09}\label{classGraph_afb9524726f8f3cda3115a0d03e3f6e09} 
+\mbox{\hyperlink{classEdge}{int}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} {\bfseries path\+Matrix} = \mbox{\hyperlink{classEdge}{nullptr}}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Conference\+Review\+Tool/src/data\+\_\+structures/Graph.\+h\end{DoxyCompactItemize}
