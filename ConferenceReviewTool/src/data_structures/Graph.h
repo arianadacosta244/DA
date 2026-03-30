@@ -18,11 +18,15 @@ class Edge;
 
 /************************* Vertex  **************************/
 
+/**
+ * @brief Vértice de um grafo direcionado com suporte a algoritmos de fluxo.
+ * @tparam T Tipo do identificador do vértice
+ */
 template <class T>
 class Vertex {
 public:
     Vertex(T in);
-    bool operator<(Vertex<T> & vertex) const; // // required by MutablePriorityQueue
+    bool operator<(Vertex<T> & vertex) const; // required by MutablePriorityQueue
 
     T getInfo() const;
     std::vector<Edge<T> *> getAdj() const;
@@ -71,6 +75,10 @@ protected:
 
 /********************** Edge  ****************************/
 
+/**
+ * @brief Aresta direcionada com suporte a fluxo e grafo residual.
+ * @tparam T Tipo do identificador do vértice
+ */
 template <class T>
 class Edge {
 public:
@@ -102,6 +110,10 @@ protected:
 
 /********************** Graph  ****************************/
 
+/**
+ * @brief Grafo direcionado genérico com lista de adjacência, suportando algoritmos de fluxo máximo.
+ * @tparam T Tipo do identificador dos vértices
+ */
 template <class T>
 class Graph {
 public:

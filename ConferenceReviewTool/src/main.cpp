@@ -9,6 +9,9 @@ static std::vector<Assignment> gAssignments;
 static bool gDataLoaded = false;
 static bool gAssigned   = false;
 
+/**
+ * @brief Mostra o menu principal no stdout.
+ */
 void showMenu() {
     std::cout << "\n=================================" << std::endl;
     std::cout << "   Assignment Tool" << std::endl;
@@ -23,6 +26,9 @@ void showMenu() {
     std::cout << "Option: ";
 }
 
+/**
+ * @brief Modo interativo: apresenta o menu e processa as opções do utilizador.
+ */
 void interactiveMode() {
     int option = -1;
     do {
@@ -32,6 +38,7 @@ void interactiveMode() {
             std::cin.ignore(10000, '\n');
             continue;
         }
+        
         std::cin.ignore(10000, '\n');
 
         switch (option) {
@@ -93,6 +100,11 @@ void interactiveMode() {
     } while (option != 0);
 }
 
+/**
+ * @brief Modo batch: lê o input, gera assignments e escreve o output sem interação do utilizador.
+ * @param inputFile Caminho para o ficheiro CSV de input
+ * @param outputFile Caminho para o ficheiro CSV de output (sobrepõe o OutputFileName do CSV se não vazio)
+ */
 void batchMode(const std::string& inputFile, const std::string& outputFile) {
     std::cout << "Running in batch mode..." << std::endl;
     std::cout << "Input: " << inputFile << std::endl;
@@ -121,6 +133,12 @@ void batchMode(const std::string& inputFile, const std::string& outputFile) {
     }
 }
 
+/**
+ * @brief Ponto de entrada do programa. Suporta modo interativo e modo batch (-b).
+ * @param argc Número de argumentos
+ * @param argv Argumentos: [-b input.csv [output.csv]]
+ * @return 0 em caso de sucesso
+ */
 int main(int argc, char* argv[]) {
     if (argc >= 3 && std::string(argv[1]) == "-b") {
         std::string inputFile  = argv[2];

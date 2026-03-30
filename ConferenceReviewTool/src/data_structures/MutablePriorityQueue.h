@@ -12,21 +12,25 @@
 #include <vector>
 
 /**
- * class T must have: (i) accessible field int queueIndex; (ii) operator< defined.
+ * @brief Fila de prioridade mutável baseada em min-heap binário.
+ *
+ * Requer que a classe T tenha: (i) campo acessível int queueIndex; (ii) operator< definido.
+ * Utilizada pelo algoritmo de Dijkstra.
+ * @tparam T Tipo dos elementos (e.g. Vertex)
+ * @complexity insert: O(log n), extractMin: O(log n), decreaseKey: O(log n)
  */
-
 template <class T>
 class MutablePriorityQueue {
     std::vector<T *> H;
-    void heapifyUp(unsigned i);
-    void heapifyDown(unsigned i);
-    inline void set(unsigned i, T * x);
+    void heapifyUp(unsigned i);   ///< Sobe o elemento na posição i até à posição correta
+    void heapifyDown(unsigned i); ///< Desce o elemento na posição i até à posição correta
+    inline void set(unsigned i, T * x); ///< Define H[i] = x e atualiza queueIndex
 public:
     MutablePriorityQueue();
-    void insert(T * x);
-    T * extractMin();
-    void decreaseKey(T * x);
-    bool empty();
+    void insert(T * x);      ///< Insere x na fila. O(log n)
+    T * extractMin();        ///< Remove e devolve o elemento mínimo. O(log n)
+    void decreaseKey(T * x); ///< Atualiza a posição de x após diminuição da chave. O(log n)
+    bool empty();            ///< Devolve true se a fila estiver vazia
 };
 
 // Index calculations

@@ -1,0 +1,36 @@
+\doxysection{Reviewer.\+h}
+\hypertarget{_reviewer_8h_source}{}\label{_reviewer_8h_source}\index{ConferenceReviewTool/src/Reviewer.h@{ConferenceReviewTool/src/Reviewer.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ REVIEWER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ REVIEWER\_H}}
+\DoxyCodeLine{00003\ \ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_reviewer_a1b2de8a356288c186dbc5a6ef951806a}{Reviewer}}\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_reviewer_aeacccab23a0ec1c59ab0283f95f01fda}{id}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00012\ \ \ \ \ std::string\ \doxymbox{\hyperlink{struct_reviewer_af9ab4025cd39328e9ce594ef165e9e9c}{name}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00013\ \ \ \ \ std::string\ \doxymbox{\hyperlink{struct_reviewer_a5ae05709e98e328427aed3ead8912fd8}{email}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_reviewer_a1a6ba130656856000843bbc57e811486}{primaryExpertise}};\ \ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_reviewer_a19fc5d836237badc57737b4b8bbdcd10}{secondaryExpertise}};\ \ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00025\ \ \ \ \ \doxymbox{\hyperlink{struct_reviewer_a1b2de8a356288c186dbc5a6ef951806a}{Reviewer}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ std::string\&\ \doxymbox{\hyperlink{struct_reviewer_af9ab4025cd39328e9ce594ef165e9e9c}{name}},\ \textcolor{keyword}{const}\ std::string\&\ \doxymbox{\hyperlink{struct_reviewer_a5ae05709e98e328427aed3ead8912fd8}{email}},}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_reviewer_a1a6ba130656856000843bbc57e811486}{primaryExpertise}},\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_reviewer_a19fc5d836237badc57737b4b8bbdcd10}{secondaryExpertise}}\ =\ 0)}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{struct_reviewer_aeacccab23a0ec1c59ab0283f95f01fda}{id}}(\doxymbox{\hyperlink{struct_reviewer_aeacccab23a0ec1c59ab0283f95f01fda}{id}}),\ \doxymbox{\hyperlink{struct_reviewer_af9ab4025cd39328e9ce594ef165e9e9c}{name}}(\doxymbox{\hyperlink{struct_reviewer_af9ab4025cd39328e9ce594ef165e9e9c}{name}}),\ \doxymbox{\hyperlink{struct_reviewer_a5ae05709e98e328427aed3ead8912fd8}{email}}(\doxymbox{\hyperlink{struct_reviewer_a5ae05709e98e328427aed3ead8912fd8}{email}}),}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_reviewer_a1a6ba130656856000843bbc57e811486}{primaryExpertise}}(\doxymbox{\hyperlink{struct_reviewer_a1a6ba130656856000843bbc57e811486}{primaryExpertise}}),\ \doxymbox{\hyperlink{struct_reviewer_a19fc5d836237badc57737b4b8bbdcd10}{secondaryExpertise}}(\doxymbox{\hyperlink{struct_reviewer_a19fc5d836237badc57737b4b8bbdcd10}{secondaryExpertise}})\ \{\}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{struct_reviewer_af7145ff53bb3ff83c109abe62d6c1ee7}{print}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ ["{}}\ <<\ \textcolor{keywordtype}{id}\ <<\ \textcolor{stringliteral}{"{}]\ "{}}\ <<\ \doxymbox{\hyperlink{struct_reviewer_af9ab4025cd39328e9ce594ef165e9e9c}{name}}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ |\ Email:\ "{}}\ <<\ \doxymbox{\hyperlink{struct_reviewer_a5ae05709e98e328427aed3ead8912fd8}{email}}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ |\ Expertise:\ "{}}\ <<\ \doxymbox{\hyperlink{struct_reviewer_a1a6ba130656856000843bbc57e811486}{primaryExpertise}};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{struct_reviewer_a19fc5d836237badc57737b4b8bbdcd10}{secondaryExpertise}}\ !=\ 0)}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}/"{}}\ <<\ \doxymbox{\hyperlink{struct_reviewer_a19fc5d836237badc57737b4b8bbdcd10}{secondaryExpertise}};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \};}
+\DoxyCodeLine{00042\ \ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ REVIEWER\_H}}
+\DoxyCodeLine{00044\ \ }
+
+\end{DoxyCode}

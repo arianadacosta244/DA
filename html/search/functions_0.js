@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['riskanalysisk1_0',['riskAnalysisK1',['../classReviewAssigner.html#a8f30245cc8f8121127dc3c04f53aba94',1,'ReviewAssigner']]]
+  ['decreasekey_0',['decreaseKey',['../class_mutable_priority_queue.html#a0878839cc1d2dba2b8ab2e589ecc6405',1,'MutablePriorityQueue']]]
 ];
